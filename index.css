@@ -1,0 +1,84 @@
+@font-face{
+    src: url("CursedTimerUlil-Aznm.ttf");
+    font-family: CursedTimer;
+}
+body {
+    margin: 0;
+    background-color: #1B244A;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin:auto;
+}
+.scorecard{
+    display: flex;
+    flex-direction:column;
+justify-content: space-between;
+font-family: CursedTimer ;
+font-style: dashed;
+font-weight: 400px;
+font-size: 90px;
+line-height: 141%;
+/* or 141% */
+color: #F94F6D;
+text-align: center;
+width: 120px;
+height: 120px;
+left: 355px;
+top: 125px;
+background:black;
+margin:67px auto;
+
+}
+
+h3 {
+font-family: 'Verdana';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 90%;
+/* identical to box height, or 90% */
+text-align:center;
+color: #EEEEEE;
+}
+
+
+#reset{
+display:flex;
+flex-direction: row;
+ margin:25px auto;
+  
+
+    height:40px;
+    width:80px;
+    
+    padding-left: 10px;
+    padding-top:2px;
+    background: red;
+
+ 
+  
+
+   
+    
+}
+button {
+text-align: center;
+width: 45px;
+height: 45px;
+left: 337px;
+top: 271px;
+color:#9AABD8;
+background-color: #1B244A;
+font-family: CursedTimer;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 155%;
+/* or 155% */
+border: 2px solid #9AABD8;
+border-radius: 5px;
+}
+
