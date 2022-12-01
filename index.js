@@ -4,36 +4,53 @@ let homeScore=0
 let guestScoreEl=document.getElementById("guest-el")
 let guestScore=0
 
-function homeAdd1(){
-    homeScore+=1
-    homeScoreEl.textContent=homeScore
-}
-function homeAdd2(){
-    homeScore+=2
-    homeScoreEl.textContent=homeScore
-}
-function homeAdd3(){
-    homeScore+=3
-    homeScoreEl.textContent=homeScore
+
+
+function homeAdd(x){
+    homeScore+=x
+     homeScoreEl.textContent=homeScore
 }
 
-function guestAdd1(){
-    guestScore+=1
-    guestScoreEl.textContent=guestScore
-}
+document.getElementById("homeBtn1").addEventListener("click",function(){
+    homeAdd(1)
+})
+document.getElementById("homeBtn2").addEventListener("click",function(){
+    homeAdd(2)
+})
+document.getElementById("homeBtn3").addEventListener("click",function(){
+    homeAdd(3)
+})
 
-function guestAdd2(){
-    guestScore+=2
-    guestScoreEl.textContent=guestScore
-}
 
-function guestAdd3(){
-    guestScore+=3
-    guestScoreEl.textContent=guestScore
-}
+function guestAdd(x)
+{ guestScore+=x
+guestScoreEl.textContent=guestScore}
+
+document.getElementById("GuestBtn1").addEventListener("click",function(){
+    guestAdd(1)
+})
+document.getElementById("GuestBtn2").addEventListener("click",function(){
+    guestAdd(2)
+})
+
+document.getElementById("GuestBtn3").addEventListener("click",function(){
+    guestAdd(3)
+})
+
 function reset(){
     guestScore=0
     guestScoreEl.textContent=guestScore
     homeScore=0
     homeScoreEl.textContent=homeScore
 }
+
+
+document.getElementById("btn").addEventListener("click",function gfgMenu() 
+            {const nav = document.querySelector('.nav');
+  
+            if (nav.style.display === "none") 
+            {nav.style.display = "block";}
+            else {nav.style.display = "none";}
+              }
+        )
+
