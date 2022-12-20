@@ -8,16 +8,17 @@ background-color: #1B244A;
 font-family: 'Cursed Timer ULiL', sans-serif;}
 
 
-body,.scorecard,.home,.guest,.container{
+body,.scorecard,.home,.guest,.container,.guestBtn,.homeBtn{
 display: flex;
 flex-direction: column;
 justify-content: center;
 margin: auto;}
     
 .container {
+    margin-top:1rem;
   flex-direction: row;  
    max-width: 40em;}
-
+   
 .scorecard{
 margin:  0.5rem 0.75rem ;
 margin-top:0;
@@ -37,15 +38,13 @@ line-height: 90%;
 text-align:center;
 color: #EEEEEE;}
 
-#reset{
-padding: 0.3em 1em;
+#reset{padding: 0.3em 1em;
 background: red;}
 
 .homeBtn, .guestBtn{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 1rem auto;}
-
+flex-direction: row;
+margin: 1rem auto;}
+    
 button {
 margin: 0.5rem 0.375rem;
 margin-bottom: 0;
