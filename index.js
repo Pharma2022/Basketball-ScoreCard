@@ -7,22 +7,20 @@ document.addEventListener("click", e =>{
     e.target.dataset.guest? guestAdd(JSON.parse(e.target.dataset.guest)):""
     e.target.id=== "reset"? reset():""  })
 
-function renderScore(){
-    document.getElementById("guest-el").textContent=guestScore
-    document.getElementById("home-el").textContent=homeScore}
+const renderScore= (elementId,score)=>document.getElementById(`${elementId}`).textContent=score   
 
-function reset(){
+const  reset= ()=>{
     guestScore=0
     homeScore=0
-    renderScore()}
+    renderScore("home-el", guestScore)
+    renderScore("guest-el", homeScore)}
 
-function homeAdd(x){
-homeScore+=x
-renderScore()}
+const homeAdd= x =>{
+    homeScore+=x
+    renderScore("home-el", homeScore)}
 
-function guestAdd(x)
-{ guestScore+=x
-renderScore()}
+const guestAdd= x =>{ guestScore+=x
+    renderScore("guest-el", guestScore)}
 
 
 
