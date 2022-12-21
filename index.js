@@ -21,6 +21,3 @@ const homeAdd= x =>{
 
 const guestAdd= x =>{ guestScore+=x
     renderScore("guest-el", guestScore)}
-
-
-
