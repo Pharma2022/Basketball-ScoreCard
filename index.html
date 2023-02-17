@@ -1,5 +1,5 @@
 <html>
-    <head>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         
         <link rel="stylesheet" href="index.css">
         <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
@@ -12,23 +12,23 @@
     </head>
     <body>
         
-        <div class="container">
-            <div class = "home">
-                <h3>HOME</h3>
+        <div class="container " id="container">
+            <div class = "home flex">
+                <h3 class= "title">HOME</h3>
                 
-                <h1 class="scorecard" id="home-el">0</h1>
+                <h1 class="scorecard flex" id="home-el">0</h1>
                 
-                <div class = "homeBtn"> 
+                <div class = "homeBtn flex"> 
                 <button id="homeBtn1" data-home=1> +1</button>
                 <button id= "homeBtn2"data-home=2> +2</button>
                 <button id="homeBtn3" data-home=3>+3</button>
                 </div>
                 
             </div>
-            <div class= "guest">
-                <h3>GUEST</h3>
-                <h1 class="scorecard" id="guest-el">0</h1>
-                  <div class="guestBtn"> 
+            <div class= "guest flex">
+                <h3 class= "title">GUEST</h3>
+                <h1 class="scorecard flex " id="guest-el">0</h1>
+                  <div class="guestBtn flex"> 
                 <button id= "GuestBtn1" data-guest=1> +1</button>
                 <button id= "GuestBtn2" data-guest=2> +2</button>
                 <button id= "GuestBtn3" data-guest=3>+3</button>

@@ -1,23 +1,47 @@
 let homeScore=0
 let guestScore=0
+const homeEl = document.getElementById("home-el")
+const guestEl = document.getElementById("guest-el")
 
-document.addEventListener("click", e =>{
-    e.preventDefault()
-    e.target.dataset.home? homeAdd(JSON.parse(e.target.dataset.home)):""
-    e.target.dataset.guest? guestAdd(JSON.parse(e.target.dataset.guest)):""
-    e.target.id=== "reset"? reset():""  })
 
-const renderScore= (elementId,score)=>document.getElementById(`${elementId}`).textContent=score   
+document.addEventListener("click", ({target:{dataset:{guest,home}, id}}) =>{
+        guest && Add(guest,false)
+        home && Add(home,true)
+        id=== "reset" &&  reset()  })
 
 const  reset= ()=>{
     guestScore=0
     homeScore=0
-    renderScore("home-el", guestScore)
-    renderScore("guest-el", homeScore)}
+    renderScore()
+}
 
-const homeAdd= x =>{
-    homeScore+=x
-    renderScore("home-el", homeScore)}
+const Add= (x,bool) =>{
+     bool ?  homeScore+=Number(x) : guestScore+=Number(x)
+    renderScore()
+    }
+    
+const renderScore= ()=>{
+    setleader()
+    homeEl.innerHTML=homeScore
+    guestEl.innerHTML= guestScore   
+    }
 
-const guestAdd= x =>{ guestScore+=x
-    renderScore("guest-el", guestScore)}
+const setleader = ()=>{
+     const el1= homeScore>guestScore ? homeEl: guestEl
+     const el2= guestScore>homeScore ? homeEl: guestEl
+     const isEqual = homeScore===guestScore
+    changeLeader(el1,el2,isEqual)
+}
+ 
+const changeLeader= (a,b,bool)=>{
+    if (bool){
+        a.classList.remove("lead")
+        b.classList.remove("lead")
+    }
+    else{
+        a.classList.add("lead")
+        b.classList.remove("lead")
+    }   
+} 
+   
+reset()
